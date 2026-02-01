@@ -12,8 +12,8 @@
   <script>
     const output = document.getElementById("output");
     
-    function.show(text) {
-      output.textContent = text;
+    function show(text) {
+      output.innerHTML = `<strong>${text}</strong>`;
     }
 
     //Message starts
@@ -24,12 +24,15 @@
     setTimeout() => show("4:00 AM - Leaving the apartment."), 2500);
     setTimeout() => show("5:00 AM - Clock in time!"), 4500);
     setTimeout() => show("6:00 AM - Store is now open for business."), 6500);
-    setTimeout() => show("8:30 AM - Time to wake up to get ready for work."), 8500);
-    setTimeout() => show("1:00 AM - Time to wake up to get ready for work."), 10500);
+    setTimeout() => show("8:30 AM - Lunch time!"), 8500);
+    setTimeout() => show("1:00 AM - Clock out time."), 10500);
 
     //Random event
     const randomDelay = Math.floor(Math.random() * 5000) + 2000;
-    setTimeout(() => show("SURPRISE EVENT: IT'S PEANUT BUTTER JELLY TIME! 🥜🧈🍇🥪"), randomDelay);
+    setTimeout(
+      () => show("SURPRISE EVENT: IT'S PEANUT BUTTER JELLY TIME! 🥜🧈🍇🥪"), 
+      randomDelay
+    );
   </script>
 
 </body>
